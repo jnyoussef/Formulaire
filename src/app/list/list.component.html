@@ -1,0 +1,22 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Date Naissance</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of etudiants">
+<td>{{e.nom}}</td>
+<td>{{e.prenom}}</td>
+<td>{{e.dateNaissance}}</td>
+<td>{{e.email}}</td>
+<td>
+    <button class="btn btn-danger" (click)="delete(e)"><i class="fa fa-close"></i></button>
+</td>
+        </tr>
+    </tbody>
+</table>
